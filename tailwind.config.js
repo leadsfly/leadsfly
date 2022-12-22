@@ -5,7 +5,7 @@ module.exports = {
     "./scenes/**/*.{html,js,ts,jsx,tsx}",
     "./hooks/**/*.{html,js,ts,jsx,tsx}",
   ],
-  mode:'jit',
+  mode: "jit",
   theme: {
     extend: {
       colors: {
@@ -19,20 +19,20 @@ module.exports = {
       },
       backgroundImage: (theme) => ({
         "gradient-rainbow":
-            "linear-gradient(81.66deg, #00B5EE 7.21%, #FF45A4 45.05%, #FFBA00 78.07%)",
+          "linear-gradient(81.66deg, #00B5EE 7.21%, #FF45A4 45.05%, #FFBA00 78.07%)",
 
         "gradient-rainblue":
-            "linear-gradient(90deg, #24CBFF 14.53%, #FC59FF 69.36%, #FFBD0C 117.73%)",
+          "linear-gradient(90deg, #24CBFF 14.53%, #FC59FF 69.36%, #FFBD0C 117.73%)",
       }),
       fontFamily: {
-        playfair:['var(--font-pfair)'],
-        opensans: ['var(--font-osans)'],
+        playfair: ["var(--font-pfair)"],
+        opensans: ["var(--font-osans)"],
       },
       content: {
-        brush: "url('./assets/brush.png')",
-        person1: "url('./assets/person-1.png')",
-        person2: "url('./assets/person-2.png')",
-        person3: "url('./assets/person-3.png')",
+        brush: "url('/assets/brush.png')",
+        person1: "url('/assets/person-1.png')",
+        person2: "url('/assets/person-2.png')",
+        person3: "url('/assets/person-3.png')",
       },
     },
     screens: {
@@ -45,4 +45,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
+};

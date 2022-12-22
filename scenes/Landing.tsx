@@ -2,6 +2,7 @@ import useMediaQuery from "../hooks/useMediaQuery";
 
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const Landing = ({ setSelectedPage }: any) => {
   const isAboveMediumScreen = useMediaQuery("(min-width: 1060px)");
@@ -34,7 +35,33 @@ const Landing = ({ setSelectedPage }: any) => {
           />
         )}
       </div>
-      <div className="z-30 basis-2/5 mt-12 md:mt-32"></div>
+      <div className="z-30 basis-2/5 mt-12 md:mt-32">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, x: -50 },
+            visible: { opacity: 1, x: 0 },
+          }}
+        >
+          <p className="text-6xl font-playfair z-10 text-center md:text-start">
+            Leads {""}
+            <span
+              className="xs:relative xs:text-deep-blue xs:font-semibold z-20 xs:before:content-brush
+              before:absolute before:-left-[25px] before:-top-[70px] before:z-[-1]"
+            >
+              Fly
+            </span>
+          </p>
+
+          <p className="mt-10 mb-7 text-sm text-center md:text-start">
+            Adipiscing arcu, in aliquam fringilla cursus. Elit arcu elementum
+            viverra malesuada sem ac faucibus dolor. Sagittis scelerisque.
+          </p>
+        </motion.div>
+      </div>
     </section>
   );
 };
