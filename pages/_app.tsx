@@ -1,8 +1,8 @@
-import 'normalize.css/normalize.css';
-import '../styles/globals.scss'
-import type { AppProps } from 'next/app'
-import { Open_Sans } from '@next/font/google'
-import { Playfair_Display } from '@next/font/google'
+import "normalize.css/normalize.css";
+import "../styles/globals.scss";
+import type { AppProps } from "next/app";
+import { Open_Sans } from "@next/font/google";
+import { Playfair_Display } from "@next/font/google";
 import { useState, useEffect } from "react";
 import useMediaQuery from "../hooks/useMediaQuery";
 import Navbar from "../scenes/Navbar";
@@ -44,7 +44,7 @@ export default function App({ Component, pageProps }: AppProps) {
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
       />
-      <div className="w-5/6 mx-auto md:h-full">
+      {/* <div className="w-5/6 mx-auto md:h-full">
         {isAboveMediumScreen && (
           <DotGroup
             selectedPage={selectedPage}
@@ -53,7 +53,7 @@ export default function App({ Component, pageProps }: AppProps) {
         )}
 
         <Landing setSelectedPage={setSelectedPage} />
-        {/*
+  
          
         <motion.div
           margin="0 0 -200px 0"
@@ -64,8 +64,9 @@ export default function App({ Component, pageProps }: AppProps) {
         </motion.div>
     
         
-  */}
-      </div>
+  }
+      </div>*/}
+
       <Component {...pageProps} />
     </main>
   );

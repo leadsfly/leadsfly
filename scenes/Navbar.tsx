@@ -1,28 +1,28 @@
-import React from 'react'
-import { useState } from "react"
-import AnchorLink from "react-anchor-link-smooth-scroll"
-import useMediaQuery from "../hooks/useMediaQuery"
+import React from "react";
+import { useState } from "react";
+import AnchorLink from "react-anchor-link-smooth-scroll";
+import useMediaQuery from "../hooks/useMediaQuery";
 import Image from "next/image";
 
-export default function Navbar({ selectedPage, setSelectedPage }:any) {
-    const [isMenuToggled, setIsMenuToggled] = useState(false);
-     
-    const isAboveMediumScreen = useMediaQuery("(min-width: 768px)");
+export default function Navbar({ selectedPage, setSelectedPage }: any) {
+  const [isMenuToggled, setIsMenuToggled] = useState(false);
 
-        const Link = ({ page, selectedPage, setSelectedPage }: any) => {
-          const lowerCasePage = page.toLowerCase();
-          return (
-            <AnchorLink
-              className={`${
-                selectedPage === lowerCasePage ? "text-yellow" : ""
-              } hover:text-yellow transition duration-500`}
-              href={`#${lowerCasePage}`}
-              onClick={() => setSelectedPage(lowerCasePage)}
-            >
-              {page}
-            </AnchorLink>
-          );
-        };
+  const isAboveMediumScreen = useMediaQuery("(min-width: 768px)");
+
+  const Link = ({ page, selectedPage, setSelectedPage }: any) => {
+    const lowerCasePage = page.toLowerCase();
+    return (
+      <AnchorLink
+        className={`${
+          selectedPage === lowerCasePage ? "text-yellow" : ""
+        } hover:text-yellow transition duration-500`}
+        href={`#${lowerCasePage}`}
+        onClick={() => setSelectedPage(lowerCasePage)}
+      >
+        {page}
+      </AnchorLink>
+    );
+  };
   return (
     <nav className={`z-40 w-full fixed top-0 py-6`}>
       <div className="flex items-center justify-between mx-auto w-5/6">
@@ -41,7 +41,7 @@ export default function Navbar({ selectedPage, setSelectedPage }:any) {
               setSelectedPage={setSelectedPage}
             />
             <Link
-              page="Projects"
+              page="Services"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
