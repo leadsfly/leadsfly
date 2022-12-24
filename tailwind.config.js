@@ -45,4 +45,9 @@ module.exports = {
     },
   },
   plugins: [],
+  extend: {
+    backgroundImage: {
+      "brush": "url('/assets/brush.png')",
+    },
+  },
 };

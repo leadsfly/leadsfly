@@ -47,6 +47,7 @@ export default function App({ Component, pageProps }: AppProps) {
             setSelectedPage={setSelectedPage}
           />
         )}
+        <Landing setSelectedPage={setSelectedPage} />
       </div>
       {/*
            <motion.div

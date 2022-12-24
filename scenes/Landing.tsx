@@ -35,6 +35,7 @@ const Landing = ({ setSelectedPage }: any) => {
           />
         )}
       </div>
+
       <div className="z-30 basis-2/5 mt-12 md:mt-32">
         <motion.div
           initial="hidden"
@@ -49,16 +50,17 @@ const Landing = ({ setSelectedPage }: any) => {
           <p className="text-6xl font-playfair z-10 text-center md:text-start">
             Leads {""}
             <span
-              className="xs:relative xs:text-deep-blue xs:font-semibold z-20 xs:before:content-brush
-              before:absolute before:-left-[25px] before:-top-[70px] before:z-[-1]"
+              className="xs:relative xs:text-white xs:font-semibold z-20  
+              before:absolute before:-left-[25px] before:-top-[70px] before:z-[-1] xs:before:overflow-hidden xs:before:width	"
             >
               Fly
             </span>
           </p>
 
           <p className="mt-10 mb-7 text-sm text-center md:text-start">
-            Adipiscing arcu, in aliquam fringilla cursus. Elit arcu elementum
-            viverra malesuada sem ac faucibus dolor. Sagittis scelerisque.
+            Our vision is to make a revolutionary impact on Study Abroad Service
+            Sector by connecting multiple organisations, recruiters and students
+            around the globe.
           </p>
         </motion.div>
       </div>
