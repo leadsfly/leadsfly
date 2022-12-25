@@ -42,7 +42,7 @@ const Project = ({ title }: any) => {
 
 function Projects({ title }: any) {
   return (
-    <section id="projects" className="pt-36 pb-36">
+    <section id="countries" className="pt-36 pb-36">
       {/* HEADINGS */}
       <motion.div
         className="md:w-2/5 mx-auto text-center"
