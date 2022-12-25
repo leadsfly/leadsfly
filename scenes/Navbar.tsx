@@ -57,12 +57,12 @@ export default function Navbar({
               setSelectedPage={setSelectedPage}
             />
             <Link
-              page="Skills"
+              page="Services"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
             <Link
-              page="Services"
+              page="Countries"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
@@ -110,12 +110,12 @@ export default function Navbar({
                 setSelectedPage={setSelectedPage}
               />
               <Link
-                page="Skills"
+                page="Services"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
               <Link
-                page="Services"
+                page="Countries"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
