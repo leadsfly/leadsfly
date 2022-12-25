@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import React from "react";
 import LineGradient from "../components/LineGradient";
 import Image from "next/image";
+import { useForm } from "react-hook-form";
+
 function Contact() {
   const {
     register,
@@ -33,7 +35,7 @@ function Contact() {
       >
         <div>
           <p className="font-playfair font-semibold text-4xl">
-            <span className="text-yellow">CONTACT ME</span> TO GET STARTED
+            <span className="text-yellow">CONTACT US</span> TO GET STARTED
           </p>
           <div className="flex md:justify-end my-5">
             <LineGradient width="w-1/2" />
@@ -55,16 +57,11 @@ function Contact() {
           className="basis-1/2 flex justify-center"
         >
           <Image
-            src="/assets/linkedin.png"
-            alt="Picture of the author"
-            width={32}
-            height={32}
-          />
-          <Image
             src="/assets/contact-image.jpeg"
-            alt="Picture of the author"
             width={591}
             height={442}
+            alt="Picture of the author"
+            className="hover:filter hover:saturate-200 transition duration-500 z-10 h-full max-h-[400px] md:max-h-[600px]"
           />
         </motion.div>
 
@@ -119,15 +116,15 @@ function Contact() {
 
             <textarea
               className="w-full bg-blue font-semibold placeholder-opaque-black p-3 mt-5"
-              name="message"
               placeholder="MESSAGE"
-              rows="4"
-              cols="50"
+              rows={4}
+              cols={50}
               {...register("message", {
                 required: true,
                 maxLength: 2000,
               })}
             />
+
             {errors.message && (
               <p className="text-red mt-1">
                 {errors.message.type === "required" &&
@@ -151,10 +148,3 @@ function Contact() {
 }
 
 export default Contact;
-function useForm(): {
-  register: any;
-  trigger: any;
-  formState: { errors: any };
-} {
-  throw new Error("Function not implemented.");
-}
