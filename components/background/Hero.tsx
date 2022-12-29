@@ -21,7 +21,7 @@ const Hero = (): JSX.Element => {
           height="100%"
           preserveAspectRatio="xMidYMid meet"
           fontFamily="Lato"
-          className="bg-deep-blue"
+          className="bg-deep-blue z-0"
         >
           <defs>
             <linearGradient

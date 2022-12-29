@@ -26,13 +26,14 @@ export default function Home() {
     return (
       <div className="relative">
         {" "}
-        <div className="w-6/6 mx-auto md:h-screen z-40">
+        <div className="relative w-6/6 mx-auto md:h-screen z-4">
           {isAboveMediumScreen && (
             <DotGroup
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
           )}
+
           <Landing setSelectedPage={setSelectedPage} />
         </div>
         <div className="w-5/6 mx-auto md:h-full ">

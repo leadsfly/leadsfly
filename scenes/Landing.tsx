@@ -11,13 +11,13 @@ const Landing = ({ setSelectedPage }: any) => {
   return (
     <section
       id="home"
-      className="relative z-100 flex md:justify-between items-center md:gap-16 md:h-full md:py-10"
+      className="relative z-100 flex justify-between items-center  h-full"
     >
       <div className="absolute w-full z-0     h-full bg-red text-white">
         <Hero />
       </div>
       <div className="z-30 basis-1.5/6 mt-12 md:mt-32"></div>
-      <motion.div className="z-30  basis-6/6 md:basis-3/6 mt-12 md:mt-32">
+      <motion.div className="z-30  basis-6/6 md:basis-3/6 mt-12 ">
         <motion.div
           initial="hidden"
           whileInView="visible"
