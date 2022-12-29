@@ -11,7 +11,7 @@ const Landing = ({ setSelectedPage }: any) => {
   return (
     <section
       id="home"
-      className="relative z-100 flex justify-between items-center  h-full"
+      className="relative z-100 flex justify-between items-center  h-full "
     >
       <div className="absolute w-full z-0     h-full bg-red text-white">
         <Hero />
@@ -30,7 +30,7 @@ const Landing = ({ setSelectedPage }: any) => {
         >
           <motion.p
             animate={{
-              scale: 1.07,
+              scale: 1,
               textShadow: "0px 0px 2px rgb(255,255,255)",
             }}
             transition={{
@@ -39,7 +39,7 @@ const Landing = ({ setSelectedPage }: any) => {
               delay: 1,
               duration: 4,
             }}
-            className="text-6xl font-playfair z-10 text-center md:text-center"
+            className="text-5xl md:text-6xl font-playfair z-10 text-center md:text-center"
           >
             Leads
             <span
@@ -56,7 +56,7 @@ const Landing = ({ setSelectedPage }: any) => {
         </motion.div>
 
         <motion.div
-          className="flex mt-5 justify-center md:justify-center"
+          className="flex mt-5 justify-center md:justify-center "
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}

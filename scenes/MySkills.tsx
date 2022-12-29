@@ -3,12 +3,15 @@ import React from "react";
 import LineGradient from "../components/LineGradient";
 import useMediaQuery from "../hooks/useMediaQuery";
 import Image from "next/image";
+import Travel from "/public/assets/travel.svg";
 function MySkills() {
   const isAboveLarge = useMediaQuery("(min-width: 1060px)");
+
+  const isAboveLarge1 = useMediaQuery("(min-width: 620px)");
   return (
-    <section id="services" className="pt-10 pb-24">
+    <section id="services" className="pt-0 pb-24">
       {/* HEADER AND IMAGE SECTION */}
-      <div className="md:flex md:justify-between md:gap-16 mt-32">
+      <div className="md:flex md:justify-between md:gap-16">
         <motion.div
           className="md:w-1/3"
           initial="hidden"
@@ -24,40 +27,28 @@ function MySkills() {
             Our <span className="text-red">Services</span>
           </p>
           <LineGradient width="w-1/3" />
-          <p className="mt-10 mb-7">
-            Aliquam, amet dui feugiat facilisi dui. Aliquam aliquet integer ut
-            fames odio in at.
+          <p className="mt-10 mb-7 text-justify">
+            We are here to support you in building a brighter future and
+            achieving your dreams with an affordable, high-quality education
           </p>
         </motion.div>
 
-        <div className="mt-16 md:mt-0">
-          {isAboveLarge ? (
+        <div className="mt-16 md:mt-0 flex justify-center">
+          {isAboveLarge1 ? (
             <div
               className="relative z-0 ml-20 before:absolute before:-top-10 before:-left-10
               before:w-full before:h-full before:border-2 before:border-blue before:z-[-1]"
             >
-              <Image
-                src="/assets/skills-image.png"
-                alt="Picture of the author"
-                width={705}
-                height={261}
-                className="z-10"
-              />
+              <Travel width={512} height={200}></Travel>
             </div>
           ) : (
-            <Image
-              src="/assets/skills-image.png"
-              alt="Picture of the author"
-              width={705}
-              height={261}
-              className="z-10"
-            />
+            <Travel width={200} height={200} className="z-10"></Travel>
           )}
         </div>
       </div>
 
       {/* SKILLS */}
-      <div className="md:flex md:justify-between mt-16 gap-32">
+      <div className="md:flex md:justify-between mt-16 gap-32 text-justify">
         {/* EXPERIENCE */}
         <motion.div
           className="md:w-1/3 mt-10"

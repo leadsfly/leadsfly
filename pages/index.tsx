@@ -55,6 +55,8 @@ export default function Home() {
             <Projects />
           </motion.div>
         </div>
+        {/*  
+   
         <LineGradient />
         <div className="w-5/6 mx-auto md:h-full">
           <motion.div
@@ -74,7 +76,7 @@ export default function Home() {
           >
             <Contact />
           </motion.div>
-        </div>
+        </div> */}
       </div>
     );
   }
