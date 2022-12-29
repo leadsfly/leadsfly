@@ -5,21 +5,8 @@ function SocialMediaIcons() {
   return (
     <div className="flex justify-between    gap-10 mt-3	  text-2xl text-deep-blue">
       <a
-        className="hover:opacity-50 transition duration-500 "
-        href="https://www.linkedin.com"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <Image
-          src="/assets/linkedin.png"
-          alt="Picture of the author"
-          width={32}
-          height={32}
-        />
-      </a>
-      <a
         className="hover:opacity-50 transition duration-500"
-        href="https://www.twitter.com"
+        href="https://twitter.com/FlyLeads?t=pG0wGmFUBPKGRCHlzP70Mw&s=09"
         target="_blank"
         rel="noreferrer"
       >
@@ -32,7 +19,7 @@ function SocialMediaIcons() {
       </a>
       <a
         className="hover:opacity-50 transition duration-500"
-        href="https://www.facebook.com"
+        href="https://www.facebook.com/profile.php?id=100084452387841"
         target="_blank"
         rel="noreferrer"
       >
@@ -45,7 +32,7 @@ function SocialMediaIcons() {
       </a>
       <a
         className="hover:opacity-50 transition duration-500"
-        href="https://www.instagram.com"
+        href="https://instagram.com/leadsflystudyabroad?igshid=YWJhMjlhZTc="
         target="_blank"
         rel="noreferrer"
       >

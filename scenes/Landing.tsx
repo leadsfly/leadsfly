@@ -16,8 +16,8 @@ const Landing = ({ setSelectedPage }: any) => {
       <div className="absolute w-full z-0     h-full bg-red text-white">
         <Hero />
       </div>
-      <div className="z-30 basis-1.5/6 mt-12 md:mt-32"></div>
-      <motion.div className="z-30  basis-6/6 md:basis-3/6 mt-12 ">
+      <div className="z-30 xs:collapse ss:basis-1.5/6 mt-12 "></div>
+      <motion.div className="z-30  basis-6/6 ss:basis-3/6 mt-12 ">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -49,7 +49,7 @@ const Landing = ({ setSelectedPage }: any) => {
               Fly
             </span>
           </motion.p>
-          <p className="mt-7 mb-7 text-lg text-center md:text-center ">
+          <p className="mt-7 mb-7 text-lg text-center md:text-center pl-3 pr-3 ss:pl-0 ss:pr-0">
             Leading path to a global future<br></br> Enable your future
             possibilities and create enduring tales
           </p>
@@ -98,7 +98,7 @@ const Landing = ({ setSelectedPage }: any) => {
           <SocialMediaIcons />
         </motion.div>
       </motion.div>
-      <div className="z-30 basis-1.5/6 mt-12 md:mt-32"></div>
+      <div className="z-30 ss:basis-1.5/6 mt-12"></div>
     </section>
   );
 };
