@@ -38,25 +38,24 @@ const Landing = ({ setSelectedPage }: any) => {
           />
         )}
       </div>
-  <div className="absolute w-full z-10     h-full bg-red text-white">
-        <Hero />
-      </div>
+ 
 
   */}
-
-      <div className="z-30 basis-1.5/6 mt-12 md:mt-32">1</div>
-      <motion.div className="z-30 bg-yellow basis-6/6 md:basis-3/6 mt-12 md:mt-32">
+      <div className="absolute w-full z-0     h-full bg-red text-white">
+        <Hero />
+      </div>
+      <div className="z-30 basis-1.5/6 mt-12 md:mt-32"></div>
+      <motion.div className="z-30  basis-6/6 md:basis-3/6 mt-12 md:mt-32">
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 1 }}
           variants={{
-            hidden: { opacity: 0, x: -250 },
+            hidden: { opacity: 1, x: 0 },
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <p className="text-white">fsdfsdf</p>
           <motion.p
             animate={{
               scale: 1.07,
@@ -78,12 +77,12 @@ const Landing = ({ setSelectedPage }: any) => {
               Fly
             </span>
           </motion.p>
-
           <p className="mt-7 mb-7 text-lg text-center md:text-center ">
             Leading path to a global future<br></br> Enable your future
             possibilities and create enduring tales
           </p>
         </motion.div>
+
         <motion.div
           className="flex mt-5 justify-center md:justify-center"
           initial="hidden"
@@ -118,16 +117,16 @@ const Landing = ({ setSelectedPage }: any) => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
-          transition={{ delay: 0.4, duration: 1 }}
+          transition={{ delay: 0.4, duration: 2 }}
           variants={{
-            hidden: { opacity: 0, y: 3 },
+            hidden: { opacity: 0, y: 13 },
             visible: { opacity: 1, y: 0 },
           }}
         >
           <SocialMediaIcons />
         </motion.div>
       </motion.div>
-      <div className="z-30 basis-1.5/6 mt-12 md:mt-32">2</div>
+      <div className="z-30 basis-1.5/6 mt-12 md:mt-32"></div>
     </section>
   );
 };
