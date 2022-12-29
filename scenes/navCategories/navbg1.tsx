@@ -34,7 +34,7 @@ function Navbg1({
   var navbarBackground = isTopOfPage ? "" : "bg-red";
   return (
     <nav
-      className={`${navbarBackground} z-40 w-full fixed top-0 py-1 sme:py-4 md:py-4 h-16`}
+      className={`${navbarBackground} z-40 w-full fixed top-0 py-2 sme:py-4 md:py-4 h-16`}
     >
       <div className="flex items-center justify-between mx-auto w-5/6">
         {/*         <motion.h4
