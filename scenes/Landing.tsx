@@ -4,15 +4,17 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import SocialMediaIcons from "../components/SocialMediaIcons";
+import Hero from "../components/background/Hero";
 
 const Landing = ({ setSelectedPage }: any) => {
   const isAboveMediumScreen = useMediaQuery("(min-width: 1060px)");
   return (
     <section
       id="home"
-      className="md:flex md:justify-between md:items-center gap-16 md:h-full py-10"
+      className="relative z-100 md:flex md:justify-between md:items-center gap-16 md:h-full py-10"
     >
-      <div className="basis-3/5 z-10 mt-16 md:mt-32 flex justify-center md:order-2">
+      {/*
+       <div className="basis-3/5 z-10 mt-16 md:mt-32 flex justify-center md:order-2">
         {isAboveMediumScreen ? (
           <div
             className="relative z-0 ml-10 before:absolute before:-top-10 before:-left-10 before:rounded-t-[400px]
@@ -36,42 +38,60 @@ const Landing = ({ setSelectedPage }: any) => {
           />
         )}
       </div>
+  <div className="absolute w-full z-10     h-full bg-red text-white">
+        <Hero />
+      </div>
 
-      <div className="z-30 basis-2/5 mt-12 md:mt-32">
+  */}
+
+      <div className="z-30 basis-1.5/6 mt-12 md:mt-32">1</div>
+      <motion.div className="z-30 bg-yellow basis-6/6 md:basis-3/6 mt-12 md:mt-32">
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 1 }}
           variants={{
-            hidden: { opacity: 0, x: -50 },
+            hidden: { opacity: 0, x: -250 },
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <p className="text-6xl font-playfair z-10 text-center md:text-start">
-            Leads {""}
+          <p className="text-white">fsdfsdf</p>
+          <motion.p
+            animate={{
+              scale: 1.07,
+              textShadow: "0px 0px 2px rgb(255,255,255)",
+            }}
+            transition={{
+              type: "spring",
+              stiffness: 120,
+              delay: 1,
+              duration: 4,
+            }}
+            className="text-6xl font-playfair z-10 text-center md:text-center"
+          >
+            Leads
             <span
               className="xs:relative xs:text-white xs:font-semibold z-20  
               before:absolute before:-left-[25px] before:-top-[70px] before:z-[-1] xs:before:overflow-hidden xs:before:width	"
             >
               Fly
             </span>
-          </p>
+          </motion.p>
 
-          <p className="mt-10 mb-7 text-sm text-center md:text-start">
-            Our vision is to make a revolutionary impact on Study Abroad Service
-            Sector by connecting multiple organisations, recruiters and students
-            around the globe.
+          <p className="mt-7 mb-7 text-lg text-center md:text-center ">
+            Leading path to a global future<br></br> Enable your future
+            possibilities and create enduring tales
           </p>
         </motion.div>
         <motion.div
-          className="flex mt-5 justify-center md:justify-start"
+          className="flex mt-5 justify-center md:justify-center"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
-          transition={{ delay: 0.2, duration: 0.5 }}
+          transition={{ delay: 0.2, duration: 1 }}
           variants={{
-            hidden: { opacity: 0, x: -50 },
+            hidden: { opacity: 0, x: 150 },
             visible: { opacity: 1, x: 0 },
           }}
         >
@@ -94,19 +114,20 @@ const Landing = ({ setSelectedPage }: any) => {
           </AnchorLink>
         </motion.div>
         <motion.div
-          className="flex mt-5 justify-center md:justify-start"
+          className="flex mt-5 justify-center md:text-center"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
-          transition={{ delay: 0.4, duration: 0.5 }}
+          transition={{ delay: 0.4, duration: 1 }}
           variants={{
-            hidden: { opacity: 0, x: -50 },
-            visible: { opacity: 1, x: 0 },
+            hidden: { opacity: 0, y: 3 },
+            visible: { opacity: 1, y: 0 },
           }}
         >
           <SocialMediaIcons />
         </motion.div>
-      </div>
+      </motion.div>
+      <div className="z-30 basis-1.5/6 mt-12 md:mt-32">2</div>
     </section>
   );
 };

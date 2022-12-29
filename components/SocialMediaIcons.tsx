@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function SocialMediaIcons() {
   return (
-    <div className="flex justify-between   ">
+    <div className="flex justify-between    gap-10 mt-3	  text-2xl text-deep-blue">
       <a
         className="hover:opacity-50 transition duration-500 "
         href="https://www.linkedin.com"
