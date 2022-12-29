@@ -1,6 +1,10 @@
 import React from "react";
 import Image from "next/image";
 
+import FB from "/public/assets/icons8-facebook.svg";
+import TW from "/public/assets/icons8-twitter.svg";
+import IN from "/public/assets/icons8-instagram.svg";
+
 function SocialMediaIcons() {
   return (
     <div className="flex justify-between    gap-10 mt-3	  text-2xl text-deep-blue">
@@ -10,12 +14,7 @@ function SocialMediaIcons() {
         target="_blank"
         rel="noreferrer"
       >
-        <Image
-          src="/assets/twitter.png"
-          alt="Picture of the author"
-          width={32}
-          height={32}
-        />
+        <TW alt="Picture of the author" width={48} height={48} />
       </a>
       <a
         className="hover:opacity-50 transition duration-500"
@@ -23,12 +22,7 @@ function SocialMediaIcons() {
         target="_blank"
         rel="noreferrer"
       >
-        <Image
-          src="/assets/facebook.png"
-          alt="Picture of the author"
-          width={32}
-          height={32}
-        />
+        <FB alt="Picture of the author" width={48} height={48} />
       </a>
       <a
         className="hover:opacity-50 transition duration-500"
@@ -36,12 +30,7 @@ function SocialMediaIcons() {
         target="_blank"
         rel="noreferrer"
       >
-        <Image
-          src="/assets/instagram.png"
-          alt="Picture of the author"
-          width={32}
-          height={32}
-        />
+        <IN alt="Picture of the author" width={48} height={48} />
       </a>
     </div>
   );
