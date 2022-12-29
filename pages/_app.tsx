@@ -65,7 +65,7 @@ export default function App({ Component, pageProps }: AppProps) {
         ></Navbar>
 
         <Component {...pageProps} />
-        <Footer></Footer>
+        {/*      <Footer></Footer> */}
       </AppContext.Provider>
     </main>
   );
