@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { ComponentType } from "react";
 import styles from "./Hero.module.scss";
 import NejTitle from "./NejTitle";
