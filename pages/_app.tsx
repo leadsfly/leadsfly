@@ -35,6 +35,7 @@ interface AppParamters {
 export default function App({ Component, pageProps }: AppProps) {
   const [selectedPage, setSelectedPage] = useState("home");
   const isAboveMediumScreen = useMediaQuery("(min-width: 1060px)");
+  //  const isAboveMediumScreen = useMediaQuery("(min-width: 800px)");
   const [isTopOfPage, setIsTopOfPage] = useState(true);
 
   const appParamters: AppParamters = {
@@ -65,7 +66,7 @@ export default function App({ Component, pageProps }: AppProps) {
         ></Navbar>
 
         <Component {...pageProps} />
-        {/*      <Footer></Footer> */}
+        <Footer></Footer>
       </AppContext.Provider>
     </main>
   );

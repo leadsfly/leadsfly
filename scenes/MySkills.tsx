@@ -8,6 +8,7 @@ function MySkills() {
   const isAboveLarge = useMediaQuery("(min-width: 1060px)");
 
   const isAboveLarge1 = useMediaQuery("(min-width: 620px)");
+  const isAboveLarge2 = false;
   return (
     <section id="services" className="pt-0 pb-24">
       {/* HEADER AND IMAGE SECTION */}
@@ -37,7 +38,7 @@ function MySkills() {
           {isAboveLarge1 ? (
             <div
               className="relative z-0 ml-20 before:absolute before:-top-10 before:-left-10
-              before:w-full before:h-full before:border-2 before:border-blue before:z-[-1]"
+              before:w-full before:h-full  before:z-[-1]"
             >
               <Travel width={512} height={200}></Travel>
             </div>
