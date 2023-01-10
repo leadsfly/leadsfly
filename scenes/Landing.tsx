@@ -51,7 +51,7 @@ const Landing = ({ setSelectedPage }: any) => {
           className="flex mt-5 justify-center md:justify-center "
           initial={{ y: 250, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, type: "spring", stiffness: 120 }}
+          transition={{ duration: 3, type: "spring", stiffness: 120 }}
         >
           <AnchorLink
             className="bg-gradient-rainblue text-deep-blue rounded-sm py-3 px-7 font-semibold

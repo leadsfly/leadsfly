@@ -33,7 +33,7 @@ const Hero = (): JSX.Element => {
             >
               <stop offset="0%" stopColor="#000000" stopOpacity={1} />
               <stop offset="0%" stopColor="#ffffff" stopOpacity={1} />
-              <stop offset="80%" stopColor="#ffffff" stopOpacity={1} />
+              <stop offset="95%" stopColor="#ffffff" stopOpacity={1} />
               <stop offset="100%" stopColor="#000000" stopOpacity={1} />
             </linearGradient>
             <mask id="mask4" x={0} y={0} width="100%" height="100%">
