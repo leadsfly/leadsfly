@@ -100,7 +100,7 @@ function Navbg1({
               initial={{ x: 350 }}
               animate={{ x: 0 }}
               exit={{ x: 350 }}
-              transition={{ duration: 1 }}
+              transition={{ duration: 3, type: "spring", stiffness: 120 }}
               className="fixed right-0 bottom-0 h-full bg-blue w-[300px] rounded-l-full border-l-8		"
             >
               <div className="flex justify-end p-12">
