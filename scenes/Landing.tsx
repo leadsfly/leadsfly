@@ -6,6 +6,11 @@ import { motion } from "framer-motion";
 import SocialMediaIcons from "../components/SocialMediaIcons";
 import Hero from "../components/background/Hero";
 
+const squareVariants = {
+  visible: { opacity: 1, scale: 4, transition: { duration: 1 } },
+  hidden: { opacity: 0, scale: 0 },
+};
+
 const Landing = ({ setSelectedPage }: any) => {
   const isAboveMediumScreen = useMediaQuery("(min-width: 1060px)");
   return (
@@ -31,13 +36,23 @@ const Landing = ({ setSelectedPage }: any) => {
               Fly
             </span>
           </p>
-          <p className="mt-7 mb-7 text-base	 ss:text-lg text-center md:text-center pl-3 pr-3 ss:pl-0 ss:pr-0">
+          <motion.p
+            className="mt-7 mb-7 text-base	 ss:text-lg text-center md:text-center pl-3 pr-3 ss:pl-0 ss:pr-0"
+            initial={{ y: 250, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, type: "spring", stiffness: 120 }}
+          >
             Leading path to a global future<br></br> Enable your future
             possibilities and create enduring tales
-          </p>
+          </motion.p>
         </div>
 
-        <div className="flex mt-5 justify-center md:justify-center ">
+        <motion.div
+          className="flex mt-5 justify-center md:justify-center "
+          initial={{ y: 250, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1, type: "spring", stiffness: 120 }}
+        >
           <AnchorLink
             className="bg-gradient-rainblue text-deep-blue rounded-sm py-3 px-7 font-semibold
               hover:bg-blue hover:text-white transition duration-500"
@@ -55,7 +70,7 @@ const Landing = ({ setSelectedPage }: any) => {
               Let's talk.
             </div>
           </AnchorLink>
-        </div>
+        </motion.div>
         <div className="flex mt-5 justify-center md:text-center">
           <SocialMediaIcons />
         </div>
