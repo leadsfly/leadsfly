@@ -4,7 +4,7 @@ import LineGradient from "../components/LineGradient";
 
 function Testimonials() {
   return (
-    <section id="testimonials" className="pt-32 pb-16">
+    <section id="testimonials" className="pt-10 pb-10">
       {/* HEADING */}
       <motion.div
         className="md:w-1/3 text-center md:text-left"
@@ -21,21 +21,21 @@ function Testimonials() {
           TESTIMONIALS
         </p>
         <LineGradient width="mx-auto w-2/5" />
-        <p className="mt-10">
-          Here's What People are Saying About My Work. Aliquam aliquet integer
-          ut fames odio in at. At magna ornare dictum lectus.
+        <p className="mt-10 pl-2 pr-2 xs:pl-0 xs:pr-0">
+          Here's What People are Saying About Leadsfly. Student Satisfaction by
+          ensuring the bright future abroad is our motto
         </p>
       </motion.div>
 
       {/* TESTIMONIALS */}
-      <div className="md:flex md:justify-between gap-8">
+      <div className="md:flex md:justify-between gap-3">
         <motion.div
-          className="mx-auto relative bg-blue max-w-[400px] h-[350px] flex flex-col justify-end p-16 mt-48
+          className="mx-auto relative  bg-blue   w-6/6 md:w-2/6   flex flex-col justify-end p-16 pb-2 xs:pb-16 mt-48
             before:absolute before:top-[-120px] before:-ml-[110px] before:left-1/2 before:content-person1"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.6 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
           variants={{
             hidden: { opacity: 0, scale: 0.8 },
             visible: { opacity: 1, scale: 1 },
@@ -43,12 +43,14 @@ function Testimonials() {
         >
           <p className="font-playfair text-6xl">“</p>
           <p className="text-center text-xl">
-            A auctor pharetra hendrerit mattis amet etiam interdum platea.
+            Career guidelines from Leadsfly is topnotch and very helpful
+            <br /> <br />
+            <span className="text-zinc-900	mt-5">Anusree O, Kannur</span>
           </p>
         </motion.div>
 
         <motion.div
-          className="mx-auto relative bg-red max-w-[400px] h-[350px] flex flex-col justify-end p-16 mt-48
+          className="mx-auto relative bg-red w-6/6 md:w-2/6   flex flex-col justify-end p-16 pb-2 xs:pb-16 mt-48
             before:absolute before:top-[-120px] before:-ml-[110px] before:left-1/2 before:content-person2"
           initial="hidden"
           whileInView="visible"
@@ -61,13 +63,15 @@ function Testimonials() {
         >
           <p className="font-playfair text-6xl">“</p>
           <p className="text-center text-xl">
-            Aliquam aliquet integer ut fames odio in at. At magna ornare dictum
-            lectus.
+            For getting proper course information suitable for our aptitude I
+            recommend Leadsfly
+            <br /> <br />
+            <span className="text-zinc-900	mt-5">Devika M , Nilambur</span>
           </p>
         </motion.div>
 
         <motion.div
-          className="mx-auto relative bg-yellow max-w-[400px] h-[350px] flex flex-col justify-end p-16 mt-48
+          className="mx-auto relative bg-yellow w-6/6 md:w-2/6  flex flex-col justify-end p-16 pb-2 xs:pb-16 mt-48
             before:absolute before:top-[-120px] before:-ml-[110px] before:left-1/2 before:content-person3"
           initial="hidden"
           whileInView="visible"
@@ -80,7 +84,10 @@ function Testimonials() {
         >
           <p className="font-playfair text-6xl">“</p>
           <p className="text-center text-xl">
-            Fames odio in at. At magna ornare dictum lectus.
+            Leadsfly's Counselling regarding part time job and visa application
+            procedures is very useful
+            <br /> <br />
+            <span className="text-zinc-900	mt-5">Jilin Raj A, Thrissur</span>
           </p>
         </motion.div>
       </div>
