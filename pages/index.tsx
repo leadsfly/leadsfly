@@ -46,8 +46,6 @@ export default function Home() {
             <MySkills />
           </motion.div>
         </div>
-        {/*  
- 
         <LineGradient />
         <div className="w-5/6 mx-auto">
           <motion.div
@@ -58,6 +56,9 @@ export default function Home() {
             <Projects />
           </motion.div>
         </div>
+        {/*  
+ 
+     
         <LineGradient />
         <div className="w-5/6 mx-auto md:h-full">
           <motion.div

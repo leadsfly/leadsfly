@@ -42,7 +42,7 @@ const Project = ({ title }: any) => {
 
 function Projects({ title }: any) {
   return (
-    <section id="countries" className="pt-36 pb-36">
+    <section id="countries" className="pt-10 pb-10">
       {/* HEADINGS */}
       <motion.div
         className="md:w-2/5 mx-auto text-center"
@@ -55,20 +55,15 @@ function Projects({ title }: any) {
           visible: { opacity: 1, y: 0 },
         }}
       >
-        <div>
+        <div className="pb-10">
           <p className="font-playfair font-semibold text-4xl">
-            <span className="text-red">Choose Your </span>
-            Favourite Destination
+            <span className="text-red">Choose Your Favourite </span>
+            Destination!
           </p>
           <div className="flex justify-center mt-5">
             <LineGradient width="w-2/3" />
           </div>
         </div>
-        <p className="mt-10 mb-10">
-          Aliquam, amet dui feugiat facilisi dui. Aliquam aliquet integer ut
-          fames odio in at. At magna ornare dictum lectus. Purus massa morbi
-          purus nec eget eleifend ut elit.
-        </p>
       </motion.div>
 
       {/* PROJECTS */}
@@ -85,7 +80,7 @@ function Projects({ title }: any) {
             className="flex justify-center text-center items-center p-10 bg-red
               max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
           >
-            BEAUTIFUL USER INTERFACES
+            QUALITY EDUCATION
           </div>
           <Project title="Project 1" />
           <Project title="Project 2" />
@@ -102,7 +97,7 @@ function Projects({ title }: any) {
             className="flex justify-center text-center items-center p-10 bg-blue
               max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
           >
-            SMOOTH USER EXPERIENCE
+            EXPOSURE TO THE WORLD
           </div>
         </motion.div>
       </div>
