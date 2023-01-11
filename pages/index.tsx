@@ -19,9 +19,9 @@ export default function Home() {
   if (!appContext) {
     return <>Error</>;
   } else {
-    const isAboveMediumScreen = appContext?.isAboveMediumScreenP;
-    const selectedPage = appContext?.selectedPageP;
-    const setSelectedPage = appContext?.setSelectedPageP;
+    const isAboveMediumScreen = appContext?.isAboveMediumScreen;
+    const selectedPage = appContext?.selectedPage;
+    const setSelectedPage = appContext?.setSelectedPage;
 
     return (
       <div className="relative">
@@ -41,7 +41,10 @@ export default function Home() {
           <motion.div
             // margin="0 0 -200px 0"
             //  amount="all"
-            onViewportEnter={() => setSelectedPage("skills")}
+            onViewportEnter={() => {
+              setSelectedPage("services");
+              console.log("entry Page  services --> " + selectedPage);
+            }}
           >
             <MySkills />
           </motion.div>
@@ -51,7 +54,11 @@ export default function Home() {
           <motion.div
             //  margin="0 0 -200px 0"
             //  amount="all"
-            onViewportEnter={() => setSelectedPage("projects")}
+
+            onViewportEnter={() => {
+              setSelectedPage("projects");
+              console.log("entry Page projects --> " + selectedPage);
+            }}
           >
             <Projects />
           </motion.div>
@@ -61,7 +68,10 @@ export default function Home() {
           <motion.div
             //  margin="0 0 -200px 0"
             //  amount="all"
-            onViewportEnter={() => setSelectedPage("testimonials")}
+            onViewportEnter={() => {
+              setSelectedPage("testimonials");
+              console.log("entry Page testimonials --> " + selectedPage);
+            }}
           >
             <Testimonials />
           </motion.div>
@@ -69,9 +79,12 @@ export default function Home() {
         <LineGradient />
         <div className="w-5/6 mx-auto md:h-full">
           <motion.div
-          //  margin="0 0 -200px 0"
-          //  amount="all"
-          //   onViewportEnter={() => setSelectedPage("contact")}
+            //  margin="0 0 -200px 0"
+            //  amount="all"
+            onViewportEnter={() => {
+              setSelectedPage("contact");
+              console.log("entry Page contact --> " + selectedPage);
+            }}
           >
             <Contact />
           </motion.div>

@@ -25,24 +25,11 @@ const OpenSans = Open_Sans({
 
 // className={`${OpenSans.variable} font-playfair`}
 
-interface AppParamters {
-  selectedPageP: any;
-  isAboveMediumScreenP: any;
-
-  setSelectedPageP: () => void;
-}
-
 export default function App({ Component, pageProps }: AppProps) {
   const [selectedPage, setSelectedPage] = useState("home");
   const isAboveMediumScreen = useMediaQuery("(min-width: 1060px)");
   //  const isAboveMediumScreen = useMediaQuery("(min-width: 800px)");
   const [isTopOfPage, setIsTopOfPage] = useState(true);
-
-  const appParamters: AppParamters = {
-    selectedPageP: selectedPage,
-    isAboveMediumScreenP: isAboveMediumScreen,
-    setSelectedPageP: () => setSelectedPage,
-  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -58,13 +45,15 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <main className={`${OpenSans.variable} font-opensans bg-deep-blue`}>
-      <AppContext.Provider value={appParamters}>
+      {" "}
+      <AppContext.Provider
+        value={{ selectedPage, isAboveMediumScreen, setSelectedPage }}
+      >
         <Navbar
           isTopOfPage={isTopOfPage}
           selectedPage={selectedPage}
           setSelectedPage={setSelectedPage}
         ></Navbar>
-
         <Component {...pageProps} />
         <Footer></Footer>
       </AppContext.Provider>

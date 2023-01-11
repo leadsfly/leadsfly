@@ -6,6 +6,6 @@ interface AppParamters {
 
   setSelectedPageP: (value: any) => void;
 }
-const AppContext = createContext<AppParamters | null>(null);
+const AppContext = createContext<any | null>(null);
 
 export default AppContext;
