@@ -47,7 +47,7 @@ export default function Home() {
           </motion.div>
         </div>
         <LineGradient />
-        <div className="w-5/6 mx-auto">
+        <div className="w-6/6 xs:w-5/6 mx-auto">
           <motion.div
             //  margin="0 0 -200px 0"
             //  amount="all"
