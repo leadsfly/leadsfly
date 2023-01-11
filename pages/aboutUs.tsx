@@ -26,7 +26,7 @@ export default function AboutUs() {
     return (
       <div className="sse:h-screen   centerCase first-line:  first-line:AnchorLink  	">
         <div
-          className="h-auto  text-justify	 glass mt-20 p-1 sse:m-20  sse:p-3 sse:rounded-2xl	
+          className="h-auto  text-justify	  mt-20 p-1 sse:m-20  sse:p-3 sse:rounded-2xl	
 	"
         >
           {" "}
