@@ -101,7 +101,7 @@ function Projects({ title }: any) {
           <Project title="Ireland" />
           <Project title="Italy" />
           <div
-            className="   p-5 xs:p-10 max-h-[200px] xs:max-h-[400px]  flex justify-center text-center items-center  bg-blue
+            className="   hidden sm:flex p-5 xs:p-10 max-h-[200px] xs:max-h-[400px]    justify-center text-center items-center  bg-blue
               max-w-[400px]  text-2xl font-playfair font-semibold leading-10	"
           >
             EXPOSURE <br></br> TO <br></br> THE WORLD

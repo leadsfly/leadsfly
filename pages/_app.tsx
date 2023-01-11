@@ -30,7 +30,7 @@ export default function App({ Component, pageProps }: AppProps) {
   const isAboveMediumScreen = useMediaQuery("(min-width: 1060px)");
   //  const isAboveMediumScreen = useMediaQuery("(min-width: 800px)");
   const [isTopOfPage, setIsTopOfPage] = useState(true);
-
+  const [isinHomePage, setisinHomePage] = useState(true);
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY === 0) {
@@ -47,12 +47,20 @@ export default function App({ Component, pageProps }: AppProps) {
     <main className={`${OpenSans.variable} font-opensans bg-deep-blue`}>
       {" "}
       <AppContext.Provider
-        value={{ selectedPage, isAboveMediumScreen, setSelectedPage }}
+        value={{
+          selectedPage,
+          isAboveMediumScreen,
+          setSelectedPage,
+          isinHomePage,
+          setisinHomePage,
+        }}
       >
         <Navbar
           isTopOfPage={isTopOfPage}
           selectedPage={selectedPage}
           setSelectedPage={setSelectedPage}
+          isinHomePage={isinHomePage}
+          setisinHomePage={setisinHomePage}
         ></Navbar>
         <Component {...pageProps} />
         <Footer></Footer>

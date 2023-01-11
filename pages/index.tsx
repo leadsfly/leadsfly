@@ -22,7 +22,10 @@ export default function Home() {
     const isAboveMediumScreen = appContext?.isAboveMediumScreen;
     const selectedPage = appContext?.selectedPage;
     const setSelectedPage = appContext?.setSelectedPage;
+    const isinHomePage = appContext?.isinHomePage;
+    const setisinHomePage = appContext?.setisinHomePage;
 
+    setisinHomePage(true);
     return (
       <div className="relative">
         {" "}

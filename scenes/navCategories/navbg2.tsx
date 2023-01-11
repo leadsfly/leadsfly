@@ -8,8 +8,9 @@ import { Great_Vibes } from "@next/font/google";
 import { AnimatePresence, motion } from "framer-motion";
 
 import Logo from "/public/assets/myicon.svg";
+import Link from "next/link";
 
-const Link = ({ page, selectedPage, setSelectedPage }: any) => {
+const LinkC = ({ page, selectedPage, setSelectedPage }: any) => {
   const lowerCasePage = page.toLowerCase();
   return (
     <AnchorLink
@@ -28,13 +29,15 @@ function Navbg2({
 
   selectedPage,
   setSelectedPage,
+  isinHomePage,
+  setisinHomePage,
 }: any) {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
   const isAboveMediumScreen = useMediaQuery("(min-width: 890px)");
   var navbarBackground = isTopOfPage ? "bg-red" : "bg-red";
   return (
     <nav
-      className={`${navbarBackground} z-40 w-full fixed top-0 py-1 sme:py-4 md:py-4 h-16`}
+      className={`${navbarBackground} z-40 w-full fixed top-0 py-2 sme:py-4 md:py-4 h-16`}
     >
       <div className="flex items-center justify-between mx-auto w-5/6">
         {/*         <motion.h4
@@ -54,32 +57,32 @@ function Navbg2({
 
         {isAboveMediumScreen ? (
           <div className="flex justify-between gap-16 font-opensans text-lg font-semibold">
-            <Link
-              page="Home"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
-            <Link
-              page="Services"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
+            <Link href="/" legacyBehavior>
+              <a className="  hover:text-yellow transition duration-500">
+                Home
+              </a>
+            </Link>
 
-            <Link
-              page="Testimonials"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
-            <Link
-              page="About Us"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
-            <Link
-              page="Contact"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
+            <Link href="/#services" legacyBehavior>
+              <a className="  hover:text-yellow transition duration-500">
+                Services
+              </a>
+            </Link>
+
+            <Link href="/#testimonials" legacyBehavior>
+              <a className="  hover:text-yellow transition duration-500">
+                Testimonials
+              </a>
+            </Link>
+            <Link href="/aboutUs" legacyBehavior>
+              <a className=" text-yellow transition duration-500">About Us</a>
+            </Link>
+
+            <Link href="/#contact" legacyBehavior>
+              <a className="  hover:text-yellow transition duration-500">
+                Contact
+              </a>
+            </Link>
           </div>
         ) : (
           <button
@@ -100,7 +103,7 @@ function Navbg2({
               initial={{ x: 350 }}
               animate={{ x: 0 }}
               exit={{ x: 350 }}
-              transition={{ duration: 1 }}
+              transition={{ duration: 3, type: "spring", stiffness: 120 }}
               className="fixed right-0 bottom-0 h-full bg-blue w-[300px] rounded-l-full border-l-8		"
             >
               <div className="flex justify-end p-12">
@@ -115,32 +118,34 @@ function Navbg2({
               </div>
 
               <div className="flex flex-col gap-10 ml-[33%] text-2xl text-deep-blue">
-                <Link
-                  page="Home"
-                  selectedPage={selectedPage}
-                  setSelectedPage={setSelectedPage}
-                />
-                <Link
-                  page="Services"
-                  selectedPage={selectedPage}
-                  setSelectedPage={setSelectedPage}
-                />
+                <Link href="/" legacyBehavior>
+                  <a className="  hover:text-yellow transition duration-500">
+                    Home
+                  </a>
+                </Link>
 
-                <Link
-                  page="Testimonials"
-                  selectedPage={selectedPage}
-                  setSelectedPage={setSelectedPage}
-                />
-                <Link
-                  page="About Us"
-                  selectedPage={selectedPage}
-                  setSelectedPage={setSelectedPage}
-                />
-                <Link
-                  page="Contact"
-                  selectedPage={selectedPage}
-                  setSelectedPage={setSelectedPage}
-                />
+                <Link href="/#services" legacyBehavior>
+                  <a className="  hover:text-yellow transition duration-500">
+                    Services
+                  </a>
+                </Link>
+
+                <Link href="/#testimonials" legacyBehavior>
+                  <a className="  hover:text-yellow transition duration-500">
+                    Testimonials
+                  </a>
+                </Link>
+                <Link href="/aboutUs" legacyBehavior>
+                  <a className=" text-yellow transition duration-500">
+                    About Us
+                  </a>
+                </Link>
+
+                <Link href="/#contact" legacyBehavior>
+                  <a className="  hover:text-yellow transition duration-500">
+                    Contact
+                  </a>
+                </Link>
               </div>
             </motion.div>
           </AnimatePresence>

@@ -8,8 +8,9 @@ import { Great_Vibes } from "@next/font/google";
 import { AnimatePresence, motion } from "framer-motion";
 
 import Logo from "/public/assets/myicon.svg";
+import Link from "next/link";
 
-const Link = ({ page, selectedPage, setSelectedPage }: any) => {
+const LinkC = ({ page, selectedPage, setSelectedPage }: any) => {
   const lowerCasePage = page.toLowerCase();
   return (
     <AnchorLink
@@ -28,6 +29,8 @@ function Navbg1({
 
   selectedPage,
   setSelectedPage,
+  isinHomePage,
+  setisinHomePage,
 }: any) {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
   const isAboveMediumScreen = useMediaQuery("(min-width: 890px)");
@@ -54,28 +57,29 @@ function Navbg1({
 
         {isAboveMediumScreen ? (
           <div className="flex justify-between gap-16 font-opensans text-lg font-semibold">
-            <Link
+            <LinkC
               page="Home"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
-            <Link
+            <LinkC
               page="Services"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
 
-            <Link
+            <LinkC
               page="Testimonials"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
-            <Link
-              page="About Us"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
-            <Link
+            <Link href="/aboutUs" legacyBehavior>
+              <a className="  hover:text-yellow transition duration-500">
+                About Us
+              </a>
+            </Link>
+
+            <LinkC
               page="Contact"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
@@ -115,28 +119,28 @@ function Navbg1({
               </div>
 
               <div className="flex flex-col gap-10 ml-[33%] text-2xl text-deep-blue">
-                <Link
+                <LinkC
                   page="Home"
                   selectedPage={selectedPage}
                   setSelectedPage={setSelectedPage}
                 />
-                <Link
+                <LinkC
                   page="Services"
                   selectedPage={selectedPage}
                   setSelectedPage={setSelectedPage}
                 />
 
-                <Link
+                <LinkC
                   page="Testimonials"
                   selectedPage={selectedPage}
                   setSelectedPage={setSelectedPage}
                 />
-                <Link
-                  page="About Us"
-                  selectedPage={selectedPage}
-                  setSelectedPage={setSelectedPage}
-                />
-                <Link
+                <Link href="/aboutUs" legacyBehavior>
+                  <a className="  hover:text-yellow transition duration-500">
+                    About Us
+                  </a>
+                </Link>
+                <LinkC
                   page="Contact"
                   selectedPage={selectedPage}
                   setSelectedPage={setSelectedPage}
