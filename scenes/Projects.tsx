@@ -18,16 +18,12 @@ const projectVariant = {
 const Project = ({ title }: any) => {
   const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500
     bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue`;
-  const projectTitle = title.split(" ").join("-").toLowerCase();
-
+  // const projectTitle = title.split(" ").join("-").toLowerCase();
+  const projectTitle = title;
   return (
     <motion.div variants={projectVariant} className="relative">
-      <div className={overlayStyles}>
+      <div className="bg-yellow  pl-3 pr-3 opacity-65	rounded-t-2xl		  absolute bottom-0 left-1/2 transform -translate-x-1/2 ">
         <p className="text-2xl font-playfair">{title}</p>
-        <p className="mt-7">
-          Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Nulla
-          porttitor accumsan tincidunt.
-        </p>
       </div>
       <Image
         src={`/assets/${projectTitle}.jpeg`}
@@ -78,26 +74,26 @@ function Projects({ title }: any) {
           {/* ROW 1 */}
           <div
             className="flex justify-center text-center items-center p-10 bg-red
-              max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
+              max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold leading-10	"
           >
-            QUALITY EDUCATION
+            QUALITY <br></br> OF <br></br>EDUCATION
           </div>
-          <Project title="Project 1" />
-          <Project title="Project 2" />
+          <Project title="UK" />
+          <Project title="Germany" />
 
           {/* ROW 2 */}
-          <Project title="Project 3" />
-          <Project title="Project 4" />
-          <Project title="Project 5" />
+          <Project title="Canada" />
+          <Project title="Australia" />
+          <Project title="France" />
 
           {/* ROW 3 */}
-          <Project title="Project 6" />
-          <Project title="Project 7" />
+          <Project title="Ireland" />
+          <Project title="Italy" />
           <div
             className="flex justify-center text-center items-center p-10 bg-blue
-              max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
+              max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold leading-10	"
           >
-            EXPOSURE TO THE WORLD
+            EXPOSURE <br></br> TO <br></br> THE WORLD
           </div>
         </motion.div>
       </div>
