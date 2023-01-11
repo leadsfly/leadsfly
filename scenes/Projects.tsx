@@ -49,7 +49,7 @@ const Project = ({ title }: any) => {
 
 function Projects({ title }: any) {
   return (
-    <section id="countries" className="pt-10 pb-10">
+    <section id="countries" className="pt-10 pb-10 mb-3">
       {/* HEADINGS */}
       <motion.div
         className="md:w-2/5 mx-auto text-center"
@@ -84,7 +84,7 @@ function Projects({ title }: any) {
         >
           {/* ROW 1 */}
           <div
-            className="flex justify-center text-center items-center  bg-red
+            className=" hidden sm:flex justify-center text-center items-center  bg-red
           p-5 xs:p-10 max-h-[200px] xs:max-h-[400px]  max-w-[400px]  text-2xl font-playfair font-semibold leading-10	"
           >
             QUALITY <br></br> OF <br></br>EDUCATION
@@ -101,7 +101,7 @@ function Projects({ title }: any) {
           <Project title="Ireland" />
           <Project title="Italy" />
           <div
-            className="    p-5 xs:p-10 max-h-[200px] xs:max-h-[400px] flex justify-center text-center items-center  bg-blue
+            className="   p-5 xs:p-10 max-h-[200px] xs:max-h-[400px]  flex justify-center text-center items-center  bg-blue
               max-w-[400px]  text-2xl font-playfair font-semibold leading-10	"
           >
             EXPOSURE <br></br> TO <br></br> THE WORLD
