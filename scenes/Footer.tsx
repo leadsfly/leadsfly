@@ -23,7 +23,7 @@ function Footer() {
             possibilities and create enduring tales
           </p>
 
-          <div className="mt-10">
+          <div className="mt-5">
             {" "}
             <LineGradient />
           </div>
