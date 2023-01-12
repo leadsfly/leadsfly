@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Head from "next/head";
 import Image from "next/image";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import LineGradient from "../components/LineGradient";
 import Contact from "../scenes/Contact";
 import DotGroup from "../scenes/DotGroup";
@@ -16,89 +16,93 @@ import Hero from "../components/background/Hero";
 
 export default function Home() {
   const appContext = useContext(AppContext);
-  if (!appContext) {
-    return <>Error</>;
-  } else {
-    const isAboveMediumScreen = appContext?.isAboveMediumScreen;
-    const selectedPage = appContext?.selectedPage;
-    const setSelectedPage = appContext?.setSelectedPage;
-    const isinHomePage = appContext?.isinHomePage;
-    const setisinHomePage = appContext?.setisinHomePage;
 
-    setisinHomePage(true);
-    return (
-      <div className="relative">
-        {" "}
-        <div className="relative w-6/6 mx-auto h-screen z-4">
-          {isAboveMediumScreen && (
-            <DotGroup
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
-          )}
+  const isAboveMediumScreen = appContext?.isAboveMediumScreen;
+  const selectedPage = appContext?.selectedPage;
+  const setSelectedPage = appContext?.setSelectedPage;
+  const isinHomePage = appContext?.isinHomePage;
+  const setisinHomePage = appContext?.setisinHomePage;
 
-          <Landing setSelectedPage={setSelectedPage} />
-        </div>
-        <LineGradient />
-        <div className="w-5/6 mx-auto md:h-full ">
-          <motion.div
-            // margin="0 0 -200px 0"
-            //  amount="all"
-            onViewportEnter={() => {
-              setSelectedPage("services");
-              console.log("entry Page  services --> " + selectedPage);
-            }}
-          >
-            <MySkills />
-          </motion.div>
-        </div>
-        <LineGradient />
-        <div className="w-6/6 xs:w-5/6 mx-auto">
-          <motion.div
-            //  margin="0 0 -200px 0"
-            //  amount="all"
+  useEffect(() => {
+    // other code
+    setisinHomePage(false);
 
-            onViewportEnter={() => {
-              setSelectedPage("projects");
-              console.log("entry Page projects --> " + selectedPage);
-            }}
-          >
-            <Projects />
-          </motion.div>
-        </div>
-        <LineGradient />
-        <div className="w-6/6 xs:w-5/6 mx-auto md:h-full">
-          <motion.div
-            //  margin="0 0 -200px 0"
-            //  amount="all"
-            onViewportEnter={() => {
-              setSelectedPage("testimonials");
-              console.log("entry Page testimonials --> " + selectedPage);
-            }}
-          >
-            <Testimonials />
-          </motion.div>
-        </div>
-        <LineGradient />
-        <div className="w-5/6 mx-auto md:h-full">
-          <motion.div
-            //  margin="0 0 -200px 0"
-            //  amount="all"
-            onViewportEnter={() => {
-              setSelectedPage("contact");
-              console.log("entry Page contact --> " + selectedPage);
-            }}
-          >
-            <Contact />
-          </motion.div>
-        </div>
-        {/*  
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  //  setisinHomePage(true);
+  return (
+    <div className="relative">
+      {" "}
+      <div className="relative w-6/6 mx-auto h-screen z-4">
+        {isAboveMediumScreen && (
+          <DotGroup
+            selectedPage={selectedPage}
+            setSelectedPage={setSelectedPage}
+          />
+        )}
+
+        <Landing setSelectedPage={setSelectedPage} />
+      </div>
+      <LineGradient />
+      <div className="w-5/6 mx-auto md:h-full ">
+        <motion.div
+          // margin="0 0 -200px 0"
+          //  amount="all"
+          onViewportEnter={() => {
+            setSelectedPage("services");
+            console.log("entry Page  services --> " + selectedPage);
+          }}
+        >
+          <MySkills />
+        </motion.div>
+      </div>
+      <LineGradient />
+      <div className="w-6/6 xs:w-5/6 mx-auto">
+        <motion.div
+          //  margin="0 0 -200px 0"
+          //  amount="all"
+
+          onViewportEnter={() => {
+            setSelectedPage("projects");
+            console.log("entry Page projects --> " + selectedPage);
+          }}
+        >
+          <Projects />
+        </motion.div>
+      </div>
+      <LineGradient />
+      <div className="w-6/6 xs:w-5/6 mx-auto md:h-full">
+        <motion.div
+          //  margin="0 0 -200px 0"
+          //  amount="all"
+          onViewportEnter={() => {
+            setSelectedPage("testimonials");
+            console.log("entry Page testimonials --> " + selectedPage);
+          }}
+        >
+          <Testimonials />
+        </motion.div>
+      </div>
+      <LineGradient />
+      <div className="w-5/6 mx-auto md:h-full">
+        <motion.div
+          //  margin="0 0 -200px 0"
+          //  amount="all"
+          onViewportEnter={() => {
+            setSelectedPage("contact");
+            console.log("entry Page contact --> " + selectedPage);
+          }}
+        >
+          <Contact />
+        </motion.div>
+      </div>
+      {/*  
  
      
       
        
  */}
-      </div>
-    );
-  }
+    </div>
+  );
 }
