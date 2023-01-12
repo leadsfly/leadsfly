@@ -37,18 +37,19 @@ export default function AboutUs() {
         The world is brimming with opportunities. Moving to a foreign country is
         never an easy process. Our mission is to support you in building a
         brighter future and achieving your dreams with an affordable,
-        high-quality education. We've partnered with reputable universities in
-        the UK, Canada, New Zealand, Germany and Europe to help you pave the way
-        to a future abroad through your studies. We are a growing EdTech Company
-        that assists students in searching and applying to overseas universities
-        through our extensive network. We are putting access to global education
-        within everyone's grasp, and we are doing it through the online platform
-        that makes use of cutting-edge technology while also incorporating a
-        personal touch that makes us stand out. We cross international borders
-        and help more and more stakeholders use our expertise and market reach
-        to meet and surpass their objectives. Our vision is to make a
-        revolutionary impact on the Study Abroad Service Sector by connecting
-        multiple organisations, recruiters and students around the globe.
+        high-quality education. We&apos;ve partnered with reputable universities
+        in the UK, Canada, New Zealand, Germany and Europe to help you pave the
+        way to a future abroad through your studies. We are a growing EdTech
+        Company that assists students in searching and applying to overseas
+        universities through our extensive network. We are putting access to
+        global education within everyone&apos;s grasp, and we are doing it
+        through the online platform that makes use of cutting-edge technology
+        while also incorporating a personal touch that makes us stand out. We
+        cross international borders and help more and more stakeholders use our
+        expertise and market reach to meet and surpass their objectives. Our
+        vision is to make a revolutionary impact on the Study Abroad Service
+        Sector by connecting multiple organisations, recruiters and students
+        around the globe.
       </div>
     </div>
   );
