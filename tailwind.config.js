@@ -14,6 +14,7 @@ module.exports = {
         red: "#DC4492",
         yellow: "#FDCC49",
         grey: "#ededed",
+        fcolor: "lightseagreen",
         "dark-grey": "#757575",
         "opaque-black": "rgba(0,0,0,0.35)",
       },
@@ -38,6 +39,7 @@ module.exports = {
     screens: {
       xs: "480px",
       ss: "620px",
+      ssf: "620px",
       sse: "690px",
       sm: "768px",
       sme: "900px",

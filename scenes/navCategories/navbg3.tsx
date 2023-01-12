@@ -37,65 +37,65 @@ function Navbg3({
   var navbarBackground = isTopOfPage ? "" : "bg-red";
   return (
     <>
-      {isAboveMediumScreen ? (
-        <div className="flex justify-between gap-2 font-opensans text-lg font-semibold">
+      {isinHomePage ? (
+        <div className="  grid    justify-between justify-items-center	 font-opensans text-lg font-semibold">
           <LinkC
             page="Home"
+            className="w-1/3"
+            selectedPage={selectedPage}
+            setSelectedPage={setSelectedPage}
+          />
+
+          <LinkC
+            page="Contact"
+            className="w-1/3"
             selectedPage={selectedPage}
             setSelectedPage={setSelectedPage}
           />
           <LinkC
             page="Services"
+            className="w-1/3"
             selectedPage={selectedPage}
             setSelectedPage={setSelectedPage}
           />
-
-          <LinkC
-            page="Testimonials"
-            selectedPage={selectedPage}
-            setSelectedPage={setSelectedPage}
-          />
-          <Link href="/aboutUs" legacyBehavior>
+          <Link href="/aboutUs" className="w-1/3" legacyBehavior>
             <a className="  hover:text-yellow transition duration-500">
               About Us
             </a>
           </Link>
-
           <LinkC
-            page="Contact"
+            page="Testimonials"
+            className="w-1/3"
             selectedPage={selectedPage}
             setSelectedPage={setSelectedPage}
           />
         </div>
       ) : (
-        <div className="flex justify-between gap-16 font-opensans text-lg font-semibold">
-          <LinkC
-            page="Home"
-            selectedPage={selectedPage}
-            setSelectedPage={setSelectedPage}
-          />
-          <LinkC
-            page="Services"
-            selectedPage={selectedPage}
-            setSelectedPage={setSelectedPage}
-          />
+        <div className="  grid justify-items-center	 font-opensans text-lg font-semibold">
+          <Link href="/" legacyBehavior>
+            <a className="  hover:text-yellow transition duration-500">Home</a>
+          </Link>
 
-          <LinkC
-            page="Testimonials"
-            selectedPage={selectedPage}
-            setSelectedPage={setSelectedPage}
-          />
-          <Link href="/aboutUs" legacyBehavior>
+          <Link href="/#contact" legacyBehavior>
+            <a className="  hover:text-yellow transition duration-500">
+              Contact
+            </a>
+          </Link>
+          <Link href="/#services" legacyBehavior>
+            <a className="  hover:text-yellow transition duration-500">
+              Services
+            </a>
+          </Link>
+          <Link href="/aboutUs" className="w-1/3" legacyBehavior>
             <a className="  hover:text-yellow transition duration-500">
               About Us
             </a>
           </Link>
-
-          <LinkC
-            page="Contact"
-            selectedPage={selectedPage}
-            setSelectedPage={setSelectedPage}
-          />
+          <Link href="/#testimonials" legacyBehavior>
+            <a className="  hover:text-yellow transition duration-500">
+              Testimonials
+            </a>
+          </Link>
         </div>
       )}
     </>

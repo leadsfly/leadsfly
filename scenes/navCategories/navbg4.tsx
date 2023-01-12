@@ -34,135 +34,19 @@ function Navbg4({
 }: any) {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
   const isAboveMediumScreen = useMediaQuery("(min-width: 890px)");
-  var navbarBackground = isTopOfPage ? "bg-red" : "bg-red";
+  var navbarBackground = isTopOfPage ? "" : "bg-red";
   return (
-    <nav
-      className={`${navbarBackground} z-40 w-full fixed top-0 py-2 sme:py-4 md:py-4 h-16`}
-    >
-      <div className="flex items-center justify-between mx-auto w-5/6">
-        {/*         <motion.h4
-          initial={{ opacity: 0, scale: 0.1 }}
-          animate={{
-            opacity: 1,
-            scale: 1.1,
-            textShadow: "0px 0px 8px rgb(255,255,255)",
-          }}
-          transition={{ delay: 0, duration: 1.5 }}
-
-          className={`${GreatVibes.className} text-3xl font-black `}
-        >
-          L F
-        </motion.h4>*/}
-        <Logo></Logo>
-
-        {isAboveMediumScreen ? (
-          <div className="flex justify-between gap-16 font-opensans text-lg font-semibold">
-            <Link href="/" legacyBehavior>
-              <a className="  hover:text-yellow transition duration-500">
-                Home
-              </a>
-            </Link>
-
-            <Link href="/#services" legacyBehavior>
-              <a className="  hover:text-yellow transition duration-500">
-                Services
-              </a>
-            </Link>
-
-            <Link href="/#testimonials" legacyBehavior>
-              <a className="  hover:text-yellow transition duration-500">
-                Testimonials
-              </a>
-            </Link>
-            <Link href="/aboutUs" legacyBehavior>
-              <a className=" text-yellow transition duration-500">About Us</a>
-            </Link>
-
-            <Link href="/#contact" legacyBehavior>
-              <a className="  hover:text-yellow transition duration-500">
-                Contact
-              </a>
-            </Link>
-          </div>
-        ) : (
-          <button
-            className="rounded-full bg-red p-2"
-            onClick={() => setIsMenuToggled(!isMenuToggled)}
-          >
-            <Image
-              alt="menu-icon"
-              src="/assets/menu-icon.svg"
-              width={32}
-              height={32}
-            />
-          </button>
-        )}
-        {!isAboveMediumScreen && isMenuToggled && (
-          <AnimatePresence>
-            <motion.div
-              initial={{ x: 350 }}
-              animate={{ x: 0 }}
-              exit={{ x: 350 }}
-              transition={{ duration: 3, type: "spring", stiffness: 120 }}
-              className="fixed right-0 bottom-0 h-full bg-blue w-[300px] rounded-l-full border-l-8		"
-            >
-              <div className="flex justify-end p-12">
-                <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
-                  <Image
-                    alt="close-icon"
-                    src="/assets/close-icon.svg"
-                    width={32}
-                    height={32}
-                  />
-                </button>
-              </div>
-
-              <div className="flex flex-col gap-10 ml-[33%] text-2xl text-deep-blue">
-                <Link href="/" legacyBehavior>
-                  <a className="  hover:text-yellow transition duration-500">
-                    Home
-                  </a>
-                </Link>
-
-                <Link href="/#services" legacyBehavior>
-                  <a className="  hover:text-yellow transition duration-500">
-                    Services
-                  </a>
-                </Link>
-
-                <Link href="/#testimonials" legacyBehavior>
-                  <a className="  hover:text-yellow transition duration-500">
-                    Testimonials
-                  </a>
-                </Link>
-                <Link href="/aboutUs" legacyBehavior>
-                  <a className=" text-yellow transition duration-500">
-                    About Us
-                  </a>
-                </Link>
-
-                <Link href="/#contact" legacyBehavior>
-                  <a className="  hover:text-yellow transition duration-500">
-                    Contact
-                  </a>
-                </Link>
-              </div>
-            </motion.div>
-          </AnimatePresence>
-        )}
-        {/*
- 
-  
-          
-        
-       
-      
-
-   
- 
-        */}
+    <>
+      <div className="  grid justify-items-center	 font-opensans text-sm		">
+        <div>7th Floor</div>
+        <div>National Pearl Star Building</div>
+        <div>Palarivattam, Edappally Road</div>
+        <div>Kochi, Kerala, 682024</div>
+        <div>Mobile 1 - 9207400080 </div>
+        <div>Mobile 2 - 7034277964 </div>
+        <div>Email - admin@leadsflyedu.com</div>
       </div>
-    </nav>
+    </>
   );
 }
 
