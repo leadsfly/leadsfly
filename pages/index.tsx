@@ -25,7 +25,7 @@ export default function Home() {
 
   useEffect(() => {
     // other code
-    setisinHomePage(false);
+    setisinHomePage(true);
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
