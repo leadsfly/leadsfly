@@ -51,7 +51,7 @@ export default function Home() {
           //  amount="all"
           onViewportEnter={() => {
             setSelectedPage("services");
-            console.log("entry Page  services --> " + selectedPage);
+            //   console.log("entry Page  services --> " + selectedPage);
           }}
         >
           <MySkills />
@@ -65,7 +65,7 @@ export default function Home() {
 
           onViewportEnter={() => {
             setSelectedPage("projects");
-            console.log("entry Page projects --> " + selectedPage);
+            //  console.log("entry Page projects --> " + selectedPage);
           }}
         >
           <Projects />
@@ -78,7 +78,7 @@ export default function Home() {
           //  amount="all"
           onViewportEnter={() => {
             setSelectedPage("testimonials");
-            console.log("entry Page testimonials --> " + selectedPage);
+            // console.log("entry Page testimonials --> " + selectedPage);
           }}
         >
           <Testimonials />
@@ -91,7 +91,7 @@ export default function Home() {
           //  amount="all"
           onViewportEnter={() => {
             setSelectedPage("contact");
-            console.log("entry Page contact --> " + selectedPage);
+            //  console.log("entry Page contact --> " + selectedPage);
           }}
         >
           <Contact />
