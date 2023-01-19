@@ -28,7 +28,7 @@ const Landing = ({ setSelectedPage }: any) => {
       <div className="z-30  basis-6/6 ss:basis-3/6 mt-12 ">
         <div>
           <p className="text-5xl md:text-6xl font-playfair z-10 text-center md:text-center">
-            Leads(Test)
+            Leads
             <span
               className="xs:relative xs:text-white xs:font-semibold z-20  
               before:absolute before:-left-[25px] before:-top-[70px] before:z-[-1] xs:before:overflow-hidden xs:before:width	"
